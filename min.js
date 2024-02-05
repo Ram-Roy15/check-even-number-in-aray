@@ -8,14 +8,15 @@ const mobiles = [
   { name: "Oneplus", price: 30000, camera: "12mp" },
 ];
 
-function getMax(phones) {
-  let max = phones[0];
+function getMin(phones) {
+  let min = phones[0];
   for (const phone of phones) {
-    if (max.price < phone.price) {
-      max = phone;
+    if (min.price > phone.price) {
+      min = phone;
     }
   }
-  return max;
+  return min;
 }
-const expensive = getMax(mobiles);
-console.log(expensive);
+
+const cheap = getMin(mobiles);
+console.log(cheap);
